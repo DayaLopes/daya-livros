@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books Planner - Daya Livros</title>
+    <meta name="theme-color" content="#feb3d0" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <style>
+        body { background-color: #feb3d0; color: #5b1305; font-family: 'Roboto', sans-serif; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+        .bg-primary { background-color: #5b1305 !important; }
+        .text-primary { color: #5b1305 !important; }
+        .btn-primary { background-color: #5b1305; border-color: #5b1305; font-family: 'Playfair Display', serif; }
+        .btn-primary:hover { background-color: #420e03; border-color: #420e03; }
+        .icon-primary { color: #5b1305 !important; }
+        .section-spacing { padding-top: 3rem; padding-bottom: 3rem; }
+        .card { border: none; box-shadow: 0 4px 6px rgba(91, 19, 5, 0.15); border-radius: 15px; }
+        .card:hover { transform: translateY(-5px); transition: 0.3s; }
+        
+        /* Ajustes de Preço Menor */
+        .price-old { text-decoration: line-through; opacity: 0.6; font-size: 1rem; }
+        .price-new { font-size: 2rem; font-weight: bold; font-family: 'Playfair Display', serif; }
+        .discount-badge { background-color: #5b1305; color: #feb3d0; padding: 4px 12px; border-radius: 20px; font-weight: bold; font-size: 0.85rem; margin-bottom: 8px; display: inline-block;}
+        
+        .back-link { position: absolute; left: 20px; top: 20px; color: #5b1305; text-decoration: none; font-weight: bold; font-size: 1.1rem; }
+        .back-link:hover { text-decoration: underline; }
+        
+        /* Ajuste do tamanho das imagens do carrossel */
+        .carousel img { max-width: 400px; width: 100%; margin: 0 auto; }
+
+        /* Botões Flutuantes */
+        .floating-button { position: fixed; right: 20px; width: 60px; height: 60px; border-radius: 30px; display: flex; align-items: center; justify-content: center; font-size: 24px; color: white; box-shadow: 0 2px 10px rgba(0,0,0,0.3); z-index: 1000; transition: transform 0.3s; text-decoration: none; }
+        .floating-button:hover { transform: scale(1.1); color: white; }
+        .whatsapp-button { bottom: 20px; background-color: #25D366; }
+        .instagram-button { bottom: 100px; background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); }
+        
+        .feature-list li { margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+    <header class="bg-white py-3 shadow-sm sticky-top position-relative">
+        <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Voltar</a>
+        <div class="container text-center">
+            <h1 class="fw-bold mb-0 text-primary">BOOKS PLANNER</h1>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <section class="w-100 section-spacing" data-aos="fade-up">
+            <div class="carousel">
+                <div><img src="./11.png" alt="Books Planner Preview 1" class="img-fluid rounded shadow-lg mx-auto"></div>
+                <div><img src="./12.png" alt="Books Planner Preview 2" class="img-fluid rounded shadow-lg mx-auto"></div>
+                <div><img src="./13.png" alt="Books Planner Preview 3" class="img-fluid rounded shadow-lg mx-auto"></div>
+                <div><img src="./14.png" alt="Books Planner Preview 4" class="img-fluid rounded shadow-lg mx-auto"></div>
+                <div><img src="./15.png" alt="Books Planner Preview 5" class="img-fluid rounded shadow-lg mx-auto"></div>
+                <div><img src="./16.png" alt="Books Planner Preview 6" class="img-fluid rounded shadow-lg mx-auto"></div>
+                <div><img src="./17.png" alt="Books Planner Preview 7" class="img-fluid rounded shadow-lg mx-auto"></div>
+                <div><img src="./18.png" alt="Books Planner Preview 8" class="img-fluid rounded shadow-lg mx-auto"></div>
+            </div>
+        </section>
+
+        <section class="text-center w-100 section-spacing" data-aos="fade-up">
+            <div class="card p-5 mb-4 bg-white">
+                <i class="fas fa-pen-fancy icon-primary mb-3" style="font-size: 3rem;"></i>
+                <h2 class="fw-bold mb-3 text-primary" style="font-size: 2.2rem;">Tire sua História da Cabeça e Coloque no Mundo</h2>
+                <p class="mb-0 mx-auto" style="font-size: 1.1rem; max-width: 600px;">
+                    O template definitivo no Notion para autores que querem organizar o caos criativo, vencer o bloqueio e finalmente terminar aquele livro.
+                </p>
+            </div>
+        </section>
+
+        <section class="text-center w-100 section-spacing" data-aos="fade-up">
+            <h2 class="fw-semibold mb-4 text-primary" style="font-size: 1.8rem;">Sobre o Produto</h2>
+            <div class="row row-cols-1 row-cols-md-2 g-4">
+                
+                <div class="col" data-aos="fade-right">
+                    <div class="card h-100 p-4">
+                        <div class="mb-3"><i class="fas fa-brain icon-primary" style="font-size: 2rem;"></i></div>
+                        <h3 class="fw-bold mb-3" style="font-size: 1.3rem;">Seu Segundo Cérebro</h3>
+                        <p style="font-size: 1rem; margin-bottom: 0; line-height: 1.6;">
+                            Escrever um livro não precisa ser uma bagunça. O Books Planner é um sistema completo e intuitivo criado no Notion para centralizar toda a sua vida de escritora.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col" data-aos="fade-left">
+                    <div class="card h-100 p-4">
+                        <div class="mb-3"><i class="fas fa-rocket icon-primary" style="font-size: 2rem;"></i></div>
+                        <h3 class="fw-bold mb-3" style="font-size: 1.3rem;">Do Início ao Fim</h3>
+                        <p style="font-size: 1rem; margin-bottom: 0; line-height: 1.6;">
+                            Do nascimento da ideia até o ponto final, você terá ferramentas para estruturar sua escaleta, monitorar seu hábito de escrita e guardar ideias aleatórias. Chega de arquivos perdidos.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="text-center w-100 section-spacing" data-aos="fade-up">
+            <h2 class="fw-semibold mb-4 text-primary" style="font-size: 1.8rem;">O que você encontrará no Books Planner:</h2>
+            
+            <div class="row row-cols-1 row-cols-md-2 g-4">
+                
+                <div class="col" data-aos="fade-right">
+                    <div class="card h-100 p-4 text-start">
+                        <div class="text-center mb-3"><i class="fas fa-sitemap icon-primary" style="font-size: 2rem;"></i><h3 class="mt-2" style="font-size: 1.4rem;">Planejamento</h3></div>
+                        <p class="mb-2"><strong>Painel do Livro:</strong> Central de comando (sinopse, título, gênero).</p>
+                        <p class="mb-2"><strong>Criação de Mundo:</strong> Regras, mapas, magia e lore.</p>
+                        <p class="mb-2"><strong>Ficha de Personagens:</strong> Perfis profundos para protagonistas e vilões.</p>
+                        <p class="mb-2"><strong>Moodboard:</strong> Referências visuais e estéticas.</p>
+                        <p class="mb-2"><strong>Escaleta e Estrutura:</strong> Planeje capítulo por capítulo.</p>
+                        <p class="mb-0"><strong>Ideias do Projeto:</strong> Insights sem perder o fio da meada.</p>
+                    </div>
+                </div>
+
+                <div class="col" data-aos="fade-left">
+                    <div class="card h-100 p-4 text-start">
+                        <div class="text-center mb-3"><i class="fas fa-clock icon-primary" style="font-size: 2rem;"></i><h3 class="mt-2" style="font-size: 1.4rem;">Produtividade</h3></div>
+                        <p class="mb-2"><strong>Diário de Escrita:</strong> Monitore constância e sentimentos.</p>
+                        <p class="mb-2"><strong>Contagem de Palavras:</strong> Acompanhe a evolução diária.</p>
+                        <p class="mb-0"><strong>Banco de Ideias Aleatórias:</strong> O lugar seguro para pensamentos soltos (limpe a mente!).</p>
+                    </div>
+                </div>
+
+                <div class="col" data-aos="fade-right">
+                    <div class="card h-100 p-4 text-start">
+                        <div class="text-center mb-3"><i class="fas fa-magic icon-primary" style="font-size: 2rem;"></i><h3 class="mt-2" style="font-size: 1.4rem;">Ferramentas Extras</h3></div>
+                        <p class="mb-0"><strong>Kit Anti-Bloqueio:</strong> Seção exclusiva com dicas e exercícios práticos para destravar a criatividade quando a tela em branco assustar.</p>
+                    </div>
+                </div>
+
+                <div class="col" data-aos="fade-left">
+                    <div class="card h-100 p-4 text-start">
+                        <div class="text-center mb-3"><i class="fas fa-laptop-code icon-primary" style="font-size: 2rem;"></i><h3 class="mt-2" style="font-size: 1.4rem;">Design e Usabilidade</h3></div>
+                        <p class="mb-2"><strong>Interface Intuitiva:</strong> Feito no Notion para ser fácil de usar.</p>
+                        <p class="mb-0"><strong>Visual Inspirador:</strong> Totalmente adaptável ao seu jeito de escrever.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="text-center w-100 section-spacing" data-aos="fade-up">
+            <div class="container" style="max-width: 450px;"> <div class="card p-4 shadow-lg" style="border: 2px solid #5b1305;">
+                    <div><span class="discount-badge">Promoção Especial</span></div>
+                    <p class="mb-0 price-old">De R$ 47,90</p>
+                    <p class="price-new text-primary mb-3">Por R$ 39,90</p>
+                    <a href="https://wa.me/5511932849265?text=Olá!%20Quero%20aproveitar%20a%20promoção%20do%20Books%20Planner%20para%20Autores." class="text-decoration-none">
+                        <button class="btn btn-primary w-100 py-2 shadow rounded-pill" style="font-size: 1rem;">GARANTIR MEU PLANNER</button>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <a href="https://www.instagram.com/dayalivros" target="_blank" class="floating-button instagram-button"><i class="fab fa-instagram"></i></a>
+    <a href="https://wa.me/5511932849265?text=Olá!%20Quero%20o%20Books%20Planner." target="_blank" class="floating-button whatsapp-button"><i class="fab fa-whatsapp"></i></a>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.carousel').slick({dots: true, infinite: true, speed: 500, slidesToShow: 1, adaptiveHeight: true, autoplay: true, arrows: false});
+            AOS.init({duration: 1000, once: true});
+        });
+    </script>
+</body>
+</html>

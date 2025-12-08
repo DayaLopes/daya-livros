@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Girlie - Daya Livros</title>
+    <meta name="theme-color" content="#feb3d0" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <style>
+        body { background-color: #feb3d0; color: #5b1305; font-family: 'Roboto', sans-serif; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+        .bg-primary { background-color: #5b1305 !important; }
+        .text-primary { color: #5b1305 !important; }
+        .btn-primary { background-color: #5b1305; border-color: #5b1305; font-family: 'Playfair Display', serif; }
+        .btn-primary:hover { background-color: #420e03; border-color: #420e03; }
+        .icon-primary { color: #5b1305 !important; }
+        .section-spacing { padding-top: 3rem; padding-bottom: 3rem; }
+        .card { border: none; box-shadow: 0 4px 6px rgba(91, 19, 5, 0.15); border-radius: 15px; }
+        .card:hover { transform: translateY(-5px); transition: 0.3s; }
+        .heart-icon { font-size: 2.5rem; filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.2)); }
+        .carousel img { max-width: 400px; width: 100%; margin: 0 auto; }
+        
+        /* Ajustes de Preço Menor */
+        .price-old { text-decoration: line-through; opacity: 0.6; font-size: 1rem; }
+        .price-new { font-size: 2rem; font-weight: bold; font-family: 'Playfair Display', serif; }
+        .discount-badge { background-color: #5b1305; color: #feb3d0; padding: 4px 12px; border-radius: 20px; font-weight: bold; font-size: 0.85rem; margin-bottom: 8px; display: inline-block;}
+        
+        .back-link { position: absolute; left: 20px; top: 20px; color: #5b1305; text-decoration: none; font-weight: bold; font-size: 1.1rem; }
+        .back-link:hover { text-decoration: underline; }
+        
+        .floating-button { position: fixed; right: 20px; width: 60px; height: 60px; border-radius: 30px; display: flex; align-items: center; justify-content: center; font-size: 24px; color: white; box-shadow: 0 2px 10px rgba(0,0,0,0.3); z-index: 1000; transition: transform 0.3s; text-decoration: none; }
+        .floating-button:hover { transform: scale(1.1); color: white; }
+        .whatsapp-button { bottom: 20px; background-color: #25D366; }
+        .instagram-button { bottom: 100px; background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); }
+    </style>
+</head>
+<body>
+    <header class="bg-white py-3 shadow-sm sticky-top position-relative">
+        <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Voltar</a>
+        <div class="container text-center">
+            <h1 class="fw-bold mb-0 text-primary">BOOK GIRLIE</h1>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="w-100 section-spacing" data-aos="fade-up">
+            <div class="carousel">
+                <div><img src="./1.png" alt="Book Girlie" class="img-fluid rounded shadow-lg mx-auto"></div>
+                <div><img src="./2.png" alt="Cores" class="img-fluid rounded shadow-lg mx-auto"></div>
+                <div><img src="./3.png" alt="Navegação" class="img-fluid rounded shadow-lg mx-auto"></div>
+                <div><img src="./4.png" alt="Estante" class="img-fluid rounded shadow-lg mx-auto"></div>
+                <div><img src="./10.png" alt="Mensal" class="img-fluid rounded shadow-lg mx-auto"></div>
+                <div><img src="./8.png" alt="Desafios" class="img-fluid rounded shadow-lg mx-auto"></div>
+                <div><img src="./5.png" alt="Listas" class="img-fluid rounded shadow-lg mx-auto"></div>
+                <div><img src="./7.png" alt="Coleções" class="img-fluid rounded shadow-lg mx-auto"></div>
+            </div>
+        </section>
+
+        <section class="text-center w-100 section-spacing" data-aos="fade-up">
+            <h2 class="fw-bold mb-3 text-primary" style="font-size: 2.2rem;">Book Girlie:<br>O Lar Digital das Suas Histórias</h2>
+            <p class="mb-0 mx-auto" style="font-size: 1.1rem; max-width: 600px;">Muito mais que um diário: um universo interativo de 186 páginas para planejar, resenhar e eternizar cada página lida.</p>
+        </section>
+
+        <section class="text-center w-100 section-spacing" data-aos="fade-up">
+            <h2 class="fw-semibold mb-4 text-primary" style="font-size: 1.8rem;">Sobre o Produto</h2>
+            <div class="row row-cols-1 row-cols-md-2 g-4">
+                <div class="col" data-aos="fade-right"><div class="card h-100 p-4"><div class="mb-3"><i class="fas fa-heart icon-primary" style="font-size: 2rem;"></i></div><h3 class="fw-bold mb-3">Seu Companheiro</h3><p>O Book Girlie não é apenas um organizador; é o companheiro ideal da sua vida literária. 100% clicável e intuitivo.</p></div></div>
+                <div class="col" data-aos="fade-left"><div class="card h-100 p-4"><div class="mb-3"><i class="fas fa-star icon-primary" style="font-size: 2rem;"></i></div><h3 class="fw-bold mb-3">Aesthetic</h3><p>Com espaço para 120 livros, estante virtual personalizável e design imersivo. Disponível em 6 cores.</p></div></div>
+            </div>
+        </section>
+
+        <section class="text-center w-100 section-spacing" data-aos="fade-up">
+            <h2 class="fw-semibold mb-3 text-primary">Escolha sua Vibe</h2>
+            <div class="row row-cols-2 row-cols-md-3 g-3">
+                <div class="col"><div class="card h-100 p-3"><div class="d-flex justify-content-center mb-3"><i class="fas fa-heart heart-icon me-2" style="color: #5b1305;"></i><i class="fas fa-heart heart-icon" style="color: #feb3d0;"></i></div><h3>Rose Bordô</h3></div></div>
+                <div class="col"><div class="card h-100 p-3"><div class="d-flex justify-content-center mb-3"><i class="fas fa-heart heart-icon me-2" style="color: #c1396f;"></i><i class="fas fa-heart heart-icon" style="color: #f8d0d8;"></i></div><h3>Pink Rose</h3></div></div>
+                <div class="col"><div class="card h-100 p-3"><div class="d-flex justify-content-center mb-3"><i class="fas fa-heart heart-icon me-2" style="color: #9a0002;"></i><i class="fas fa-heart heart-icon" style="color: #efe5dc;"></i></div><h3>Cherry Vanilla</h3></div></div>
+                <div class="col"><div class="card h-100 p-3"><div class="d-flex justify-content-center mb-3"><i class="fas fa-heart heart-icon me-2" style="color: #301c1b;"></i><i class="fas fa-heart heart-icon" style="color: #ffecab;"></i></div><h3>Espresso Butter</h3></div></div>
+                <div class="col"><div class="card h-100 p-3"><div class="d-flex justify-content-center mb-3"><i class="fas fa-heart heart-icon me-2" style="color: #9e8cbd;"></i><i class="fas fa-heart heart-icon" style="color: #faeec1;"></i></div><h3>Lavender Cream</h3></div></div>
+                <div class="col"><div class="card h-100 p-3"><div class="d-flex justify-content-center mb-3"><i class="fas fa-heart heart-icon me-2" style="color: #7a8450;"></i><i class="fas fa-heart heart-icon" style="color: #faeec1;"></i></div><h3>Green Cream</h3></div></div>
+            </div>
+        </section>
+
+        <section class="text-center w-100 section-spacing" data-aos="fade-up">
+            <h2 class="fw-semibold mb-4 text-primary" style="font-size: 1.8rem;">O que você encontrará no Book Girlie?</h2>
+            <div class="row row-cols-1 row-cols-md-2 g-4">
+                <div class="col" data-aos="fade-right"><div class="card h-100 p-4"><div class="text-center mb-3"><i class="fas fa-pencil-alt icon-primary" style="font-size: 2rem;"></i><h3 class="mt-2" style="font-size: 1.4rem;">Organização e Registros</h3></div><p class="mb-2"><strong>Biblioteca:</strong> Espaço visual para colocar as capas dos 120 livros.</p><p class="mb-2"><strong>Páginas de Resenhas:</strong> Espaço dedicado para avaliação individual de cada leitura.</p><p class="mb-2"><strong>Estante Virtual:</strong> Página interativa para "pintar a lombada" e deixar a estante colorida e aesthetic.</p><p class="mb-0"><strong>TBR (To Be Read):</strong> Lista de desejados e fila de leitura.</p></div></div>
+                <div class="col" data-aos="fade-left"><div class="card h-100 p-4"><div class="text-center mb-3"><i class="fas fa-heart icon-primary" style="font-size: 2rem;"></i><h3 class="mt-2" style="font-size: 1.4rem;">Coleções</h3></div><p class="mb-2"><strong>Capa Favorita:</strong> Destaque para as capas mais bonitas do ano.</p><p class="mb-2"><strong>Quotes:</strong> Área para guardar as citações preferidas.</p><p class="mb-2"><strong>Favoritos de Cada Mês:</strong> O pódio das melhores leituras mês a mês.</p><p class="mb-0"><strong>Autores do Ano:</strong> Para acompanhar a diversidade de autores lidos.</p></div></div>
+                <div class="col" data-aos="fade-right"><div class="card h-100 p-4"><div class="text-center mb-3"><i class="fas fa-calendar-day icon-primary" style="font-size: 2rem;"></i><h3 class="mt-2" style="font-size: 1.4rem;">Calendário e Acompanhamento</h3></div><p class="mb-2"><strong>Páginas Mensais (Jan a Dez):</strong> Com tracker para marcar os dias lidos e espaço para adicionar as capas das leituras do mês.</p><p class="mb-0"><strong>Recap do Ano:</strong> A retrospectiva completa com estatísticas e memórias do ano.</p></div></div>
+                <div class="col" data-aos="fade-left"><div class="card h-100 p-4"><div class="text-center mb-3"><i class="fas fa-trophy icon-primary" style="font-size: 2rem;"></i><h3 class="mt-2" style="font-size: 1.4rem;">Desafios e Gamificação</h3></div><p class="mb-2"><strong>Bingo Literário:</strong> Uma forma lúdica e criativa de decidir qual será a próxima leitura.</p><p class="mb-2"><strong>Desafio de A a Z:</strong> Para ler livros que completem todas as letras do alfabeto.</p><p class="mb-2"><strong>Desafio dos Livros:</strong> Metas progressivas de quantidade (de 10 até 120 livros).</p><p class="mb-0"><strong>Leia para Ganhar:</strong> Sistema de recompensas para se manter motivada.</p></div></div>
+            </div>
+        </section>
+
+        <section class="text-center w-100 section-spacing" data-aos="fade-up">
+            <h2 class="fw-semibold mb-4 text-primary" style="font-size: 1.8rem;">Formato do Book Girlie</h2>
+            <div class="card p-4">
+                <div class="row row-cols-2 g-4">
+                    <div class="col"><div class="d-flex flex-column align-items-center"><i class="fas fa-tablet-alt icon-primary mb-2" style="font-size: 1.5rem;"></i><h3 class="fw-semibold mb-1" style="font-size: 1rem;">100% Clicável</h3><p style="font-size: 0.8rem; margin-bottom: 0;">Navegação intuitiva</p></div></div>
+                    <div class="col"><div class="d-flex flex-column align-items-center"><i class="fas fa-download icon-primary mb-2" style="font-size: 1.5rem;"></i><h3 class="fw-semibold mb-1" style="font-size: 1rem;">Download Imediato</h3><p style="font-size: 0.8rem; margin-bottom: 0;">Acesso na hora</p></div></div>
+                    <div class="col"><div class="d-flex flex-column align-items-center"><i class="fas fa-headset icon-primary mb-2" style="font-size: 1.5rem;"></i><h3 class="fw-semibold mb-1" style="font-size: 1rem;">Suporte</h3><p style="font-size: 0.8rem; margin-bottom: 0;">Via WhatsApp</p></div></div>
+                    <div class="col"><div class="d-flex flex-column align-items-center"><i class="fas fa-sync icon-primary mb-2" style="font-size: 1.5rem;"></i><h3 class="fw-semibold mb-1" style="font-size: 1rem;">Vitalício</h3><p style="font-size: 0.8rem; margin-bottom: 0;">Use para sempre</p></div></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="text-center w-100 section-spacing" data-aos="fade-up">
+            <div class="container" style="max-width: 450px;"> <div class="card p-4 shadow-lg" style="border: 2px solid #5b1305;">
+                    <div><span class="discount-badge">Oferta de Lançamento</span></div>
+                    <p class="mb-0 price-old">De R$ 29,90</p>
+                    <p class="price-new text-primary mb-3">Por R$ 14,90</p>
+                    <a href="https://wa.me/5511932849265?text=Olá!%20Quero%20o%20Book%20Girlie%20na%20promoção." class="text-decoration-none">
+                        <button class="btn btn-primary w-100 py-2 shadow rounded-pill" style="font-size: 1rem;">COMPRAR AGORA</button>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <a href="https://www.instagram.com/dayalivros" target="_blank" class="floating-button instagram-button"><i class="fab fa-instagram"></i></a>
+    <a href="https://wa.me/5511932849265?text=Olá!%20Quero%20o%20Book%20Girlie." target="_blank" class="floating-button whatsapp-button"><i class="fab fa-whatsapp"></i></a>
+
+    <div style="position: fixed; bottom: 20px; left: 20px; z-index: 1000; width: 300px; max-width: 80%;">
+         <div class="shadow-lg" style="border-radius: 12px; background: rgba(255,255,255,0.9);">
+             <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DWYoYGBbGKurt?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+         </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.carousel').slick({dots: true, infinite: true, speed: 500, slidesToShow: 1, adaptiveHeight: true, autoplay: true, arrows: false});
+            AOS.init({duration: 1000, once: true});
+        });
+    </script>
+</body>
+</html>

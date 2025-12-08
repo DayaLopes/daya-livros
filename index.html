@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daya Livros - Home</title>
+    <meta name="theme-color" content="#feb3d0" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { background-color: #feb3d0; color: #5b1305; font-family: 'Roboto', sans-serif; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+        .text-primary { color: #5b1305 !important; }
+        .btn-primary { background-color: #5b1305; border-color: #5b1305; font-family: 'Playfair Display', serif; }
+        .btn-primary:hover { background-color: #420e03; border-color: #420e03; }
+        
+        /* Card de Seleção */
+        .selection-card {
+            background: rgba(255,255,255,0.7);
+            border-radius: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            border: 2px solid transparent;
+            height: 100%;
+        }
+        .selection-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(91, 19, 5, 0.2);
+            border-color: #5b1305;
+            background: white;
+        }
+        .card-icon { font-size: 4rem; margin-bottom: 1rem; color: #5b1305; }
+
+        /* Botões Flutuantes (Insta e Whats) */
+        .floating-button { position: fixed; right: 20px; width: 60px; height: 60px; border-radius: 30px; display: flex; align-items: center; justify-content: center; font-size: 24px; color: white; box-shadow: 0 2px 10px rgba(0,0,0,0.3); z-index: 1000; transition: transform 0.3s; text-decoration: none; }
+        .floating-button:hover { transform: scale(1.1); color: white; }
+        
+        .whatsapp-button { bottom: 20px; background-color: #25D366; }
+        .instagram-button { bottom: 100px; background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); }
+    </style>
+</head>
+<body>
+    <header class="bg-white py-4 shadow-sm sticky-top">
+        <div class="container text-center">
+            <h1 class="fw-bold mb-0 text-primary" style="font-size: 2.5rem;">DAYA LIVROS</h1>
+        </div>
+    </header>
+
+    <div class="container d-flex flex-column justify-content-center align-items-center" style="min-height: 80vh;">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold" style="font-size: 2rem;">Bem-vinda ao nosso universo</h2>
+            <p style="font-size: 1.2rem;">Escolha o seu próximo passo:</p>
+        </div>
+
+        <div class="row w-100" style="max-width: 900px;">
+            <div class="col-md-6 mb-4">
+                <a href="book-girlie.html" style="text-decoration: none; color: inherit;">
+                    <div class="card selection-card p-5 text-center">
+                        <i class="fas fa-book-open card-icon"></i>
+                        <h3 class="fw-bold mb-3">Book Girlie</h3>
+                        <p>O Reading Journal interativo para organizar suas leituras e criar um diário visual.</p>
+                        <button class="btn btn-primary mt-3 px-4 rounded-pill">VER DETALHES</button>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-md-6 mb-4">
+                <a href="books-planner.html" style="text-decoration: none; color: inherit;">
+                    <div class="card selection-card p-5 text-center">
+                        <i class="fas fa-pen-nib card-icon"></i>
+                        <h3 class="fw-bold mb-3">Books Planner</h3>
+                        <p>O sistema no Notion para autores planejarem, escreverem e finalizarem seus livros.</p>
+                        <button class="btn btn-primary mt-3 px-4 rounded-pill">VER DETALHES</button>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <a href="https://www.instagram.com/dayalivros" target="_blank" class="floating-button instagram-button"><i class="fab fa-instagram"></i></a>
+    <a href="https://wa.me/5511932849265?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20produtos%20da%20Daya." target="_blank" class="floating-button whatsapp-button"><i class="fab fa-whatsapp"></i></a>
+
+    <footer class="text-center py-4 opacity-75">
+        <small>© 2023 DAYA LIVROS</small>
+    </footer>
+</body>
+</html>
