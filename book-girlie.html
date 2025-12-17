@@ -13,52 +13,49 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <style>
         body { background-color: #feb3d0; color: #5b1305; font-family: 'Roboto', sans-serif; }
-        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+        h1, h2, h3, h4 { font-family: 'Playfair Display', serif; }
         .bg-primary { background-color: #5b1305 !important; }
         .text-primary { color: #5b1305 !important; }
         .btn-primary { background-color: #5b1305; border-color: #5b1305; font-family: 'Playfair Display', serif; }
         .btn-primary:hover { background-color: #420e03; border-color: #420e03; }
-        .icon-primary { color: #5b1305 !important; }
         .section-spacing { padding-top: 3rem; padding-bottom: 3rem; }
-        .card { border: none; box-shadow: 0 4px 6px rgba(91, 19, 5, 0.15); border-radius: 15px; }
-        .card:hover { transform: translateY(-5px); transition: 0.3s; }
+        .card { border: none; box-shadow: 0 4px 6px rgba(91, 19, 5, 0.1); border-radius: 15px; }
         
-        /* Ajustes de Preço Menor */
-        .price-old { text-decoration: line-through; opacity: 0.6; font-size: 1rem; }
-        .price-new { font-size: 2rem; font-weight: bold; font-family: 'Playfair Display', serif; }
-        .discount-badge { background-color: #5b1305; color: #feb3d0; padding: 4px 12px; border-radius: 20px; font-weight: bold; font-size: 0.85rem; margin-bottom: 8px; display: inline-block;}
+        .price-old { text-decoration: line-through; opacity: 0.6; font-size: 0.9rem; }
+        .price-new { font-size: 1.8rem; font-weight: bold; }
+        .promo-banner { background-color: #5b1305; color: #feb3d0; padding: 8px 25px; border-radius: 30px; font-weight: bold; font-size: 0.9rem; display: inline-block; margin-bottom: 25px; }
         
-        .back-link { position: absolute; left: 20px; top: 20px; color: #5b1305; text-decoration: none; font-weight: bold; font-size: 1.1rem; }
-        .back-link:hover { text-decoration: underline; }
-        
-        /* Ajuste do tamanho das imagens do carrossel */
+        .back-link { position: absolute; left: 20px; top: 20px; color: #5b1305; text-decoration: none; font-weight: bold; font-size: 1.1rem; z-index: 1001; }
         .carousel img { max-width: 400px; width: 100%; margin: 0 auto; }
 
-        /* Ajuste para as imagens das Vibes (Divas) */
-        .vibe-card img {
-            width: 100%;
-            border-radius: 12px;
-            transition: transform 0.3s ease;
+        /* --- NOVO CSS DA ANIMAÇÃO DAS DIVAS --- */
+        .vibe-card {
+            perspective: 1000px; /* Dá profundidade para a animação */
         }
+        .vibe-card img { 
+            width: 100%; 
+            border-radius: 12px; 
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Transição suave com um leve "pulo" */
+            position: relative;
+            z-index: 1;
+        }
+        /* Quando passa o mouse sobre o card, a imagem reage */
         .vibe-card:hover img {
-            transform: scale(1.02);
+            transform: scale(1.05) translateY(-8px); /* Aumenta e sobe */
+            box-shadow: 0 15px 30px rgba(91, 19, 5, 0.3) !important; /* Sombra mais forte e na cor da marca */
+            z-index: 2;
         }
+        /* ------------------------------------- */
 
-        /* Botões Flutuantes */
-        .floating-button { position: fixed; right: 20px; width: 60px; height: 60px; border-radius: 30px; display: flex; align-items: center; justify-content: center; font-size: 24px; color: white; box-shadow: 0 2px 10px rgba(0,0,0,0.3); z-index: 1000; transition: transform 0.3s; text-decoration: none; }
-        .floating-button:hover { transform: scale(1.1); color: white; }
+        .floating-button { position: fixed; right: 20px; width: 55px; height: 55px; border-radius: 30px; display: flex; align-items: center; justify-content: center; font-size: 22px; color: white; box-shadow: 0 2px 10px rgba(0,0,0,0.3); z-index: 1000; text-decoration: none; }
         .whatsapp-button { bottom: 20px; background-color: #25D366; }
-        .instagram-button { bottom: 100px; background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); }
+        .instagram-button { bottom: 85px; background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); }
 
-        /* Correção Spotify para não bater no WhatsApp */
-        .spotify-widget {
-            position: fixed; 
-            bottom: 20px; 
-            left: 20px; 
-            z-index: 999; 
-            width: calc(100% - 90px); 
-            max-width: 300px;
-        }
+        .custom-info-card { background: white; padding: 1rem; border-radius: 12px; height: 100%; border: 1px solid rgba(91, 19, 5, 0.05); text-align: center; }
+        .custom-info-card h4 { font-size: 0.9rem; font-weight: bold; margin-bottom: 5px; color: #5b1305; }
+        .custom-info-card p { font-size: 0.8rem; margin-bottom: 0; line-height: 1.3; }
+
+        .faq-card { background: #fff; border-radius: 15px; border-left: 5px solid #5b1305; }
     </style>
 </head>
 <body>
@@ -69,127 +66,147 @@
         </div>
     </header>
 
-    <div class="container">
+    <div class="container text-center">
         <section class="w-100 section-spacing" data-aos="fade-up">
-            <div class="carousel">
-                <div><img src="./2.png" alt="Capa Book Girlie" class="img-fluid rounded shadow-lg mx-auto"></div>
-                <div><img src="./3.png" alt="Home e Navegação" class="img-fluid rounded shadow-lg mx-auto"></div>
-                <div><img src="./4.png" alt="Estante Personalizada" class="img-fluid rounded shadow-lg mx-auto"></div>
-                <div><img src="./8.png" alt="Calendário Mensal" class="img-fluid rounded shadow-lg mx-auto"></div>
-                <div><img src="./6.png" alt="Desafios Literários" class="img-fluid rounded shadow-lg mx-auto"></div>
-                <div><img src="./9.png" alt="Trackers de Leitura" class="img-fluid rounded shadow-lg mx-auto"></div>
-                <div><img src="./5.png" alt="TBR e Autores" class="img-fluid rounded shadow-lg mx-auto"></div>
-                <div><img src="./7.png" alt="Coleções" class="img-fluid rounded shadow-lg mx-auto"></div>
-                <div><img src="./10.png" alt="Recap do Ano" class="img-fluid rounded shadow-lg mx-auto"></div>
-            </div>
-        </section>
-
-        <section class="text-center w-100 section-spacing" data-aos="fade-up">
-            <h2 class="fw-bold mb-3 text-primary" style="font-size: 2.2rem;">Book Girlie:<br>A Sua Era Literária</h2>
+            <h2 class="fw-bold mb-3 text-primary" style="font-size: 2.2rem;">A Sua Era Literária</h2>
             <p class="mb-0 mx-auto" style="font-size: 1.1rem; max-width: 600px;">
                 Muito mais que um diário: um universo interativo com quase 200 páginas para você planejar, resenhar e viver suas leituras com a energia de uma verdadeira Diva Pop.
             </p>
         </section>
 
-        <section class="text-center w-100 section-spacing" data-aos="fade-up">
-            <h2 class="fw-semibold mb-4 text-primary" style="font-size: 1.8rem;">Sobre o Produto</h2>
-            <div class="row row-cols-1 row-cols-md-2 g-4">
-                <div class="col" data-aos="fade-right"><div class="card h-100 p-4"><div class="mb-3"><i class="fas fa-heart icon-primary" style="font-size: 2rem;"></i></div><h3 class="fw-bold mb-3">Seu Companheiro</h3><p>O Book Girlie não é apenas um organizador; é o companheiro ideal da sua vida literária. 100% clicável e intuitivo.</p></div></div>
-                <div class="col" data-aos="fade-left"><div class="card h-100 p-4"><div class="mb-3"><i class="fas fa-star icon-primary" style="font-size: 2rem;"></i></div><h3 class="fw-bold mb-3">Aesthetic</h3><p>Com espaço para 120 livros, estante virtual personalizável e design imersivo. Disponível em 6 cores.</p></div></div>
+        <section class="w-100 section-spacing" data-aos="fade-up">
+            <div class="carousel">
+                <div><img src="./2.png" alt="Capa" class="img-fluid rounded shadow-lg mx-auto"></div>
+                <div><img src="./3.png" alt="Home" class="img-fluid rounded shadow-lg mx-auto"></div>
+                <div><img src="./4.png" alt="Estante" class="img-fluid rounded shadow-lg mx-auto"></div>
+                <div><img src="./8.png" alt="Meses" class="img-fluid rounded shadow-lg mx-auto"></div>
+                <div><img src="./6.png" alt="Desafios" class="img-fluid rounded shadow-lg mx-auto"></div>
+                <div><img src="./9.png" alt="Trackers" class="img-fluid rounded shadow-lg mx-auto"></div>
+                <div><img src="./5.png" alt="TBR" class="img-fluid rounded shadow-lg mx-auto"></div>
+                <div><img src="./7.png" alt="Coleções" class="img-fluid rounded shadow-lg mx-auto"></div>
+                <div><img src="./10.png" alt="Recap" class="img-fluid rounded shadow-lg mx-auto"></div>
             </div>
         </section>
 
         <section class="text-center w-100 section-spacing" data-aos="fade-up">
             <h2 class="fw-semibold mb-3 text-primary">Escolha sua Vibe</h2>
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
-                
-                <div class="col vibe-card" data-aos="zoom-in">
-                    <img src="./28.png" alt="Rose Bordô Vibe" class="shadow-sm">
-                </div>
-
-                <div class="col vibe-card" data-aos="zoom-in">
-                    <img src="./30.png" alt="Pink Rose Vibe" class="shadow-sm">
-                </div>
-
-                <div class="col vibe-card" data-aos="zoom-in">
-                    <img src="./29.png" alt="Cherry Vanilla Vibe" class="shadow-sm">
-                </div>
-
-                <div class="col vibe-card" data-aos="zoom-in">
-                    <img src="./31.png" alt="Espresso Butter Vibe" class="shadow-sm">
-                </div>
-
-                <div class="col vibe-card" data-aos="zoom-in">
-                    <img src="./32.png" alt="Lavender Cream Vibe" class="shadow-sm">
-                </div>
-
-                <div class="col vibe-card" data-aos="zoom-in">
-                    <img src="./33.png" alt="Green Cream Vibe" class="shadow-sm">
-                </div>
-
-            </div>
-        </section>
-
-        <section class="text-center w-100 section-spacing" data-aos="fade-up">
-            <div class="container" style="max-width: 600px;">
-                <div class="card p-4 border-0 shadow-sm" style="background-color: rgba(255,255,255,0.6);">
-                    <div class="mb-2"><i class="fas fa-crown icon-primary" style="font-size: 2rem;"></i></div>
-                    <h3 class="fw-bold text-primary mb-3">Não encontrou sua Diva Pop?</h3>
-                    <p class="mb-4">Quer um Book Girlie inspirado na sua artista favorita que não está na lista? Entre em contato para fazer uma encomenda personalizada!</p>
-                    
-                    <a href="https://wa.me/5511932849265?text=Olá!%20Gostaria%20de%20encomendar%20um%20Book%20Girlie%20da%20minha%20diva%20pop.%0A%0ANome%20da%20Diva:%20%0A2%20Cores%20Favoritas:%20" target="_blank" class="text-decoration-none">
-                        <button class="btn btn-outline-dark rounded-pill px-4">
-                            <i class="fas fa-magic me-2"></i> ENCOMENDAR PERSONALIZADO
-                        </button>
-                    </a>
-                </div>
+                <div class="col vibe-card"><img src="./28.png" alt="Taylor" class="shadow-sm"></div>
+                <div class="col vibe-card"><img src="./30.png" alt="Ariana" class="shadow-sm"></div>
+                <div class="col vibe-card"><img src="./29.png" alt="Sabrina" class="shadow-sm"></div>
+                <div class="col vibe-card"><img src="./31.png" alt="Beyonce" class="shadow-sm"></div>
+                <div class="col vibe-card"><img src="./32.png" alt="Olivia" class="shadow-sm"></div>
+                <div class="col vibe-card"><img src="./33.png" alt="Billie" class="shadow-sm"></div>
             </div>
         </section>
 
         <section class="text-center w-100 section-spacing" data-aos="fade-up">
             <h2 class="fw-semibold mb-4 text-primary" style="font-size: 1.8rem;">O que você encontrará no Book Girlie?</h2>
-            <div class="row row-cols-1 row-cols-md-2 g-4">
-                <div class="col" data-aos="fade-right"><div class="card h-100 p-4"><div class="text-center mb-3"><i class="fas fa-pencil-alt icon-primary" style="font-size: 2rem;"></i><h3 class="mt-2" style="font-size: 1.4rem;">Organização e Registros</h3></div><p class="mb-2"><strong>Biblioteca:</strong> Espaço visual para colocar as capas dos 120 livros.</p><p class="mb-2"><strong>Páginas de Resenhas:</strong> Espaço dedicado para avaliação individual de cada leitura.</p><p class="mb-2"><strong>Estante Virtual:</strong> Página interativa para "pintar a lombada" e deixar a estante colorida e aesthetic.</p><p class="mb-0"><strong>TBR (To Be Read):</strong> Lista de desejados e fila de leitura.</p></div></div>
-                <div class="col" data-aos="fade-left"><div class="card h-100 p-4"><div class="text-center mb-3"><i class="fas fa-heart icon-primary" style="font-size: 2rem;"></i><h3 class="mt-2" style="font-size: 1.4rem;">Coleções</h3></div><p class="mb-2"><strong>Capa Favorita:</strong> Destaque para as capas mais bonitas do ano.</p><p class="mb-2"><strong>Quotes:</strong> Área para guardar as citações preferidas.</p><p class="mb-2"><strong>Favoritos de Cada Mês:</strong> O pódio das melhores leituras mês a mês.</p><p class="mb-0"><strong>Autores do Ano:</strong> Para acompanhar a diversidade de autores lidos.</p></div></div>
-                <div class="col" data-aos="fade-right"><div class="card h-100 p-4"><div class="text-center mb-3"><i class="fas fa-calendar-day icon-primary" style="font-size: 2rem;"></i><h3 class="mt-2" style="font-size: 1.4rem;">Calendário e Acompanhamento</h3></div><p class="mb-2"><strong>Páginas Mensais (Jan a Dez):</strong> Com tracker para marcar os dias lidos e espaço para adicionar as capas das leituras do mês.</p><p class="mb-0"><strong>Recap do Ano:</strong> A retrospectiva completa com estatísticas e memórias do ano.</p></div></div>
-                <div class="col" data-aos="fade-left"><div class="card h-100 p-4"><div class="text-center mb-3"><i class="fas fa-trophy icon-primary" style="font-size: 2rem;"></i><h3 class="mt-2" style="font-size: 1.4rem;">Desafios e Gamificação</h3></div><p class="mb-2"><strong>Bingo Literário:</strong> Uma forma lúdica e criativa de decidir qual será a próxima leitura.</p><p class="mb-2"><strong>Desafio de A a Z:</strong> Para ler livros que completem todas as letras do alfabeto.</p><p class="mb-2"><strong>Desafio dos Livros:</strong> Metas progressivas de quantidade (de 10 até 120 livros).</p><p class="mb-0"><strong>Leia para Ganhar:</strong> Sistema de recompensas para se manter motivada.</p></div></div>
+            
+            <div class="row row-cols-1 row-cols-md-2 g-4 mb-4">
+                <div class="col"><div class="card h-100 p-4 text-center">
+                    <h3 class="h5 fw-bold text-primary mb-3"><i class="fas fa-pencil-alt d-block mb-2"></i>Organização e Registros</h3>
+                    <p class="small mb-1">TBR: Lista de desejados.</p>
+                    <p class="small mb-1">Resenhas: Avaliação individual.</p>
+                    <p class="small mb-1">Biblioteca: Espaço visual para 120 livros.</p>
+                    <p class="small">Estante Virtual: Página interativa para pintar.</p>
+                </div></div>
+                <div class="col"><div class="card h-100 p-4 text-center">
+                    <h3 class="h5 fw-bold text-primary mb-3"><i class="fas fa-heart d-block mb-2"></i>Coleções</h3>
+                    <p class="small mb-1">Quotes: Suas citações preferidas.</p>
+                    <p class="small mb-1">Autores: Acompanhe a diversidade lida.</p>
+                    <p class="small">Favoritos: O pódio das melhores leituras.</p>
+                </div></div>
+                <div class="col"><div class="card h-100 p-4 text-center">
+                    <h3 class="h5 fw-bold text-primary mb-3"><i class="fas fa-calendar-day d-block mb-2"></i>Calendário</h3>
+                    <p class="small mb-1">Recap do Ano: Retrospectiva completa.</p>
+                    <p class="small">Páginas Mensais: Tracker de Janeiro a Dezembro.</p>
+                </div></div>
+                <div class="col"><div class="card h-100 p-4 text-center">
+                    <h3 class="h5 fw-bold text-primary mb-3"><i class="fas fa-trophy d-block mb-2"></i>Desafios</h3>
+                    <p class="small mb-1">Bingo Literário: Decisão lúdica.</p>
+                    <p class="small mb-1">Desafio de A a Z: Complete o alfabeto.</p>
+                    <p class="small">Leia para Ganhar: Recompensas para motivar.</p>
+                </div></div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-md-6"><div class="card h-100 p-4 text-center">
+                    <h3 class="h5 fw-bold text-primary mb-3"><i class="fas fa-users d-block mb-2"></i>Clubes Literários</h3>
+                    <p class="small">Seção exclusiva para registrar as leituras em grupo e suas impressões com o clube literário.</p>
+                </div></div>
             </div>
         </section>
 
         <section class="text-center w-100 section-spacing" data-aos="fade-up">
-            <h2 class="fw-semibold mb-4 text-primary" style="font-size: 1.8rem;">Formato do Book Girlie</h2>
-            <div class="card p-4">
-                <div class="row row-cols-2 g-4">
-                    <div class="col"><div class="d-flex flex-column align-items-center"><i class="fas fa-tablet-alt icon-primary mb-2" style="font-size: 1.5rem;"></i><h3 class="fw-semibold mb-1" style="font-size: 1rem;">100% Clicável</h3><p style="font-size: 0.8rem; margin-bottom: 0;">Navegação intuitiva</p></div></div>
-                    <div class="col"><div class="d-flex flex-column align-items-center"><i class="fas fa-download icon-primary mb-2" style="font-size: 1.5rem;"></i><h3 class="fw-semibold mb-1" style="font-size: 1rem;">Download Imediato</h3><p style="font-size: 0.8rem; margin-bottom: 0;">Acesso na hora</p></div></div>
-                    <div class="col"><div class="d-flex flex-column align-items-center"><i class="fas fa-headset icon-primary mb-2" style="font-size: 1.5rem;"></i><h3 class="fw-semibold mb-1" style="font-size: 1rem;">Suporte</h3><p style="font-size: 0.8rem; margin-bottom: 0;">Via WhatsApp</p></div></div>
-                    <div class="col"><div class="d-flex flex-column align-items-center"><i class="fas fa-sync icon-primary mb-2" style="font-size: 1.5rem;"></i><h3 class="fw-semibold mb-1" style="font-size: 1rem;">Vitalício</h3><p style="font-size: 0.8rem; margin-bottom: 0;">Use para sempre</p></div></div>
+            <div class="container" style="max-width: 850px;">
+                
+                <div class="card p-4 border-0 mb-4" style="background-color: rgba(255, 255, 255, 0.65);">
+                    <i class="fas fa-crown d-block mb-3" style="font-size: 2rem; color: #5b1305;"></i>
+                    <h2 class="fw-bold text-primary mb-2">Não encontrou sua Diva Pop?</h2>
+                    <p class="mb-0 text-center small text-muted">Quer um Book Girlie inspirado na sua artista favorita que não está na lista? Entre em contato para fazer uma encomenda personalizada!</p>
                 </div>
+
+                <div class="row row-cols-1 row-cols-md-3 g-2 mb-4 justify-content-center">
+                    <div class="col"><div class="custom-info-card shadow-sm"><h4>Personalização</h4><p>Escolha o tema e as cores.</p></div></div>
+                    <div class="col"><div class="custom-info-card shadow-sm"><h4>Prazo de Envio</h4><p>De 5 a 7 dias úteis.</p></div></div>
+                    <div class="col"><div class="custom-info-card shadow-sm"><h4>Sinal de 50%</h4><p>Produção após o sinal.</p></div></div>
+                </div>
+
             </div>
         </section>
 
         <section class="text-center w-100 section-spacing" data-aos="fade-up">
-            <div class="container" style="max-width: 450px;">
-                <div class="card p-4 shadow-lg" style="border: 2px solid #5b1305;">
-                    <div><span class="discount-badge">Oferta de Lançamento</span></div>
-                    <p class="mb-0 price-old">De R$ 29,90</p>
-                    <p class="price-new text-primary mb-3">Por R$ 14,90</p>
-                    <a href="https://wa.me/5511932849265?text=Olá!%20Quero%20o%20Book%20Girlie%20na%20promoção." class="text-decoration-none">
-                        <button class="btn btn-primary w-100 py-2 shadow rounded-pill" style="font-size: 1rem;">COMPRAR AGORA</button>
-                    </a>
+            <div class="promo-banner shadow-sm">VALOR PROMOCIONAL DO DIA 18 A 20 DE DEZEMBRO DE 2025</div>
+            
+            <div class="row g-4 justify-content-center mt-2">
+                
+                <div class="col-12 col-md-5">
+                    <div class="card p-4 h-100 shadow-lg text-center" style="border: 2px solid #5b1305; background: #fff;">
+                        <h3 class="fw-bold text-primary mb-3">Book Girlie: A pronta entrega</h3>
+                        <div class="mb-4">
+                            <p class="mb-0 price-old">De R$ 29,90</p>
+                            <p class="price-new text-primary mb-0">Por R$ 14,90</p>
+                        </div>
+                        <a href="https://wa.me/5511932849265?text=Olá!%20Quero%20o%20Book%20Girlie%20Básico%20na%20promoção." class="text-decoration-none">
+                            <button class="btn btn-primary w-100 py-3 shadow rounded-pill">COMPRAR BÁSICO</button>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-5">
+                    <div class="card p-4 h-100 shadow-lg text-center" style="border: 2px solid #5b1305; background: #fff;">
+                        <h3 class="fw-bold text-primary mb-3">Book Girlie: Personalizado</h3>
+                        <div class="mb-4">
+                            <p class="mb-0 price-old">De R$ 34,90</p>
+                            <p class="price-new text-primary mb-0">Por R$ 29,90</p>
+                        </div>
+                        <a href="https://wa.me/5511932849265?text=Olá!%20Quero%20o%20Book%20Girlie%20Personalizado%20na%20promoção." class="text-decoration-none">
+                            <button class="btn btn-primary w-100 py-3 shadow rounded-pill">PEDIR PERSONALIZADO</button>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="text-center w-100 section-spacing" data-aos="fade-up">
+            <h2 class="fw-semibold mb-4 text-primary">Dúvidas Frequentes</h2>
+            <div class="container" style="max-width: 700px;">
+                <div class="faq-card p-4 shadow-sm text-center mb-3">
+                    <h4 class="h6 fw-bold mb-2">Qual aplicativo devo usar?</h4>
+                    <p class="small mb-3 text-center">O Book Girlie funciona perfeitamente nos melhores aplicativos gratuitos do mercado:</p>
+                    <div class="row text-center">
+                        <div class="col-6"><p class="small"><strong>Android:</strong><br>Samsung Notes ou JNotes.</p></div>
+                        <div class="col-6"><p class="small"><strong>iPad/iPhone:</strong><br>CollaNote ou GoodNotes.</p></div>
+                    </div>
                 </div>
             </div>
         </section>
     </div>
 
     <a href="https://www.instagram.com/dayalivros" target="_blank" class="floating-button instagram-button"><i class="fab fa-instagram"></i></a>
-    <a href="https://wa.me/5511932849265?text=Olá!%20Quero%20o%20Book%20Girlie." target="_blank" class="floating-button whatsapp-button"><i class="fab fa-whatsapp"></i></a>
-
-    <div class="spotify-widget">
-         <div class="shadow-lg" style="border-radius: 12px; background: rgba(255,255,255,0.9);">
-             <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DWYoYGBbGKurt?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-         </div>
-    </div>
+    <a href="https://wa.me/5511932849265?text=Olá!" target="_blank" class="floating-button whatsapp-button"><i class="fab fa-whatsapp"></i></a>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
