@@ -21,31 +21,25 @@
         .section-spacing { padding-top: 3rem; padding-bottom: 3rem; }
         .card { border: none; box-shadow: 0 4px 6px rgba(91, 19, 5, 0.1); border-radius: 15px; }
         
-        .price-old { text-decoration: line-through; opacity: 0.6; font-size: 0.9rem; }
         .price-new { font-size: 1.8rem; font-weight: bold; }
-        .promo-banner { background-color: #5b1305; color: #feb3d0; padding: 8px 25px; border-radius: 30px; font-weight: bold; font-size: 0.9rem; display: inline-block; margin-bottom: 25px; }
-        
         .back-link { position: absolute; left: 20px; top: 20px; color: #5b1305; text-decoration: none; font-weight: bold; font-size: 1.1rem; z-index: 1001; }
+        
         .carousel img { max-width: 400px; width: 100%; margin: 0 auto; }
 
-        /* --- NOVO CSS DA ANIMAÇÃO DAS DIVAS --- */
-        .vibe-card {
-            perspective: 1000px; /* Dá profundidade para a animação */
-        }
+        /* Animação das Divas */
+        .vibe-card { perspective: 1000px; }
         .vibe-card img { 
             width: 100%; 
             border-radius: 12px; 
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Transição suave com um leve "pulo" */
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
             position: relative;
             z-index: 1;
         }
-        /* Quando passa o mouse sobre o card, a imagem reage */
         .vibe-card:hover img {
-            transform: scale(1.05) translateY(-8px); /* Aumenta e sobe */
-            box-shadow: 0 15px 30px rgba(91, 19, 5, 0.3) !important; /* Sombra mais forte e na cor da marca */
+            transform: scale(1.05) translateY(-8px);
+            box-shadow: 0 15px 30px rgba(91, 19, 5, 0.3) !important;
             z-index: 2;
         }
-        /* ------------------------------------- */
 
         .floating-button { position: fixed; right: 20px; width: 55px; height: 55px; border-radius: 30px; display: flex; align-items: center; justify-content: center; font-size: 22px; color: white; box-shadow: 0 2px 10px rgba(0,0,0,0.3); z-index: 1000; text-decoration: none; }
         .whatsapp-button { bottom: 20px; background-color: #25D366; }
@@ -76,15 +70,15 @@
 
         <section class="w-100 section-spacing" data-aos="fade-up">
             <div class="carousel">
-                <div><img src="./2.png" alt="Capa" class="img-fluid rounded shadow-lg mx-auto"></div>
-                <div><img src="./3.png" alt="Home" class="img-fluid rounded shadow-lg mx-auto"></div>
-                <div><img src="./4.png" alt="Estante" class="img-fluid rounded shadow-lg mx-auto"></div>
-                <div><img src="./8.png" alt="Meses" class="img-fluid rounded shadow-lg mx-auto"></div>
-                <div><img src="./6.png" alt="Desafios" class="img-fluid rounded shadow-lg mx-auto"></div>
-                <div><img src="./9.png" alt="Trackers" class="img-fluid rounded shadow-lg mx-auto"></div>
-                <div><img src="./5.png" alt="TBR" class="img-fluid rounded shadow-lg mx-auto"></div>
-                <div><img src="./7.png" alt="Coleções" class="img-fluid rounded shadow-lg mx-auto"></div>
-                <div><img src="./10.png" alt="Recap" class="img-fluid rounded shadow-lg mx-auto"></div>
+                <div><img src="./2.png" alt="Capa" class="img-fluid rounded mx-auto shadow-lg"></div>
+                <div><img src="./3.png" alt="Home" class="img-fluid rounded mx-auto shadow-lg"></div>
+                <div><img src="./4.png" alt="Estante" class="img-fluid rounded mx-auto shadow-lg"></div>
+                <div><img src="./8.png" alt="Meses" class="img-fluid rounded mx-auto shadow-lg"></div>
+                <div><img src="./6.png" alt="Desafios" class="img-fluid rounded mx-auto shadow-lg"></div>
+                <div><img src="./9.png" alt="Trackers" class="img-fluid rounded mx-auto shadow-lg"></div>
+                <div><img src="./5.png" alt="TBR" class="img-fluid rounded mx-auto shadow-lg"></div>
+                <div><img src="./7.png" alt="Coleções" class="img-fluid rounded mx-auto shadow-lg"></div>
+                <div><img src="./10.png" alt="Recap" class="img-fluid rounded mx-auto shadow-lg"></div>
             </div>
         </section>
 
@@ -100,27 +94,8 @@
             </div>
         </section>
 
-             <section class="text-center w-100 section-spacing" data-aos="fade-up">
-            <div class="container" style="max-width: 850px;">
-                
-                <div class="card p-4 border-0 mb-4" style="background-color: rgba(255, 255, 255, 0.65);">
-                    <i class="fas fa-crown d-block mb-3" style="font-size: 2rem; color: #5b1305;"></i>
-                    <h2 class="fw-bold text-primary mb-2">Não encontrou sua Diva Pop?</h2>
-                    <p class="mb-0 text-center small text-muted">Quer um Book Girlie inspirado na sua artista favorita que não está na lista? Entre em contato para fazer uma encomenda personalizada!</p>
-                </div>
-
-                <div class="row row-cols-1 row-cols-md-3 g-2 mb-4 justify-content-center">
-                    <div class="col"><div class="custom-info-card shadow-sm"><h4>Personalização</h4><p>Escolha o tema e as cores.</p></div></div>
-                    <div class="col"><div class="custom-info-card shadow-sm"><h4>Prazo de Envio</h4><p>De 5 a 7 dias úteis.</p></div></div>
-                    <div class="col"><div class="custom-info-card shadow-sm"><h4>Sinal de 50%</h4><p>Produção após o sinal.</p></div></div>
-                </div>
-
-            </div>
-        </section>
-
         <section class="text-center w-100 section-spacing" data-aos="fade-up">
             <h2 class="fw-semibold mb-4 text-primary" style="font-size: 1.8rem;">O que você encontrará no Book Girlie?</h2>
-            
             <div class="row row-cols-1 row-cols-md-2 g-4 mb-4">
                 <div class="col"><div class="card h-100 p-4 text-center">
                     <h3 class="h5 fw-bold text-primary mb-3"><i class="fas fa-pencil-alt d-block mb-2"></i>Organização e Registros</h3>
@@ -147,7 +122,6 @@
                     <p class="small">Leia para Ganhar: Recompensas para motivar.</p>
                 </div></div>
             </div>
-
             <div class="row justify-content-center">
                 <div class="col-md-6"><div class="card h-100 p-4 text-center">
                     <h3 class="h5 fw-bold text-primary mb-3"><i class="fas fa-users d-block mb-2"></i>Clubes Literários</h3>
@@ -157,36 +131,48 @@
         </section>
 
         <section class="text-center w-100 section-spacing" data-aos="fade-up">
-            <div class="promo-banner shadow-sm">VALOR PROMOCIONAL DO DIA 18 A 20 DE DEZEMBRO DE 2025</div>
-            
+            <div class="container" style="max-width: 850px;">
+                <div class="card p-4 border-0 mb-4" style="background-color: rgba(255, 255, 255, 0.65);">
+                    <i class="fas fa-crown d-block mb-3" style="font-size: 2rem; color: #5b1305;"></i>
+                    <h2 class="fw-bold text-primary mb-2">Não encontrou sua Diva Pop?</h2>
+                    <p class="mb-0 text-center small text-muted">Quer um Book Girlie inspirado na sua artista favorita que não está na lista? Entre em contato para fazer uma encomenda personalizada!</p>
+                </div>
+                <div class="row row-cols-1 row-cols-md-3 g-2 mb-4 justify-content-center">
+                    <div class="col"><div class="custom-info-card shadow-sm"><h4>Personalização</h4><p>Escolha o tema e as cores.</p></div></div>
+                    <div class="col"><div class="custom-info-card shadow-sm"><h4>Prazo de Envio</h4><p>De 5 a 7 dias úteis.</p></div></div>
+                    <div class="col"><div class="custom-info-card shadow-sm"><h4>Sinal de 50%</h4><p>Produção após o sinal.</p></div></div>
+                </div>
+                <p class="small text-muted text-center" style="line-height: 1.4;">O valor inclui o serviço de edição personalizada e a criação de um arquivo exclusivo do zero.</p>
+            </div>
+        </section>
+
+        <section class="text-center w-100 section-spacing" data-aos="fade-up">
+            <h2 class="fw-bold mb-5 text-primary" style="font-size: 2rem;">Adquira o Seu</h2>
             <div class="row g-4 justify-content-center mt-2">
-                
                 <div class="col-12 col-md-5">
                     <div class="card p-4 h-100 shadow-lg text-center" style="border: 2px solid #5b1305; background: #fff;">
-                        <h3 class="fw-bold text-primary mb-3">Book Girlie: A pronta entrega</h3>
+                        <h3 class="fw-bold text-primary mb-3">Book Girlie: Básico</h3>
+                        <p class="small mb-4">Escolha uma das 6 divas disponíveis e comece a organizar sua leitura hoje.</p>
                         <div class="mb-4">
-                            <p class="mb-0 price-old">De R$ 29,90</p>
-                            <p class="price-new text-primary mb-0">Por R$ 14,90</p>
+                            <p class="price-new text-primary mb-0">R$ 29,90</p>
                         </div>
-                        <a href="https://wa.me/5511932849265?text=Olá!%20Quero%20o%20Book%20Girlie%20Básico%20na%20promoção." class="text-decoration-none">
+                        <a href="https://wa.me/5511932849265?text=Olá!%20Quero%20o%20Book%20Girlie%20Básico." class="text-decoration-none">
                             <button class="btn btn-primary w-100 py-3 shadow rounded-pill">COMPRAR BÁSICO</button>
                         </a>
                     </div>
                 </div>
-
                 <div class="col-12 col-md-5">
                     <div class="card p-4 h-100 shadow-lg text-center" style="border: 2px solid #5b1305; background: #fff;">
                         <h3 class="fw-bold text-primary mb-3">Book Girlie: Personalizado</h3>
+                        <p class="small mb-4">Escolha sua diva e cores exclusivas sob medida para seu gosto.</p>
                         <div class="mb-4">
-                            <p class="mb-0 price-old">De R$ 34,90</p>
-                            <p class="price-new text-primary mb-0">Por R$ 29,90</p>
+                            <p class="price-new text-primary mb-0">R$ 34,90</p>
                         </div>
-                        <a href="https://wa.me/5511932849265?text=Olá!%20Quero%20o%20Book%20Girlie%20Personalizado%20na%20promoção." class="text-decoration-none">
+                        <a href="https://wa.me/5511932849265?text=Olá!%20Quero%20o%20Book%20Girlie%20Personalizado." class="text-decoration-none">
                             <button class="btn btn-primary w-100 py-3 shadow rounded-pill">PEDIR PERSONALIZADO</button>
                         </a>
                     </div>
                 </div>
-
             </div>
         </section>
 
@@ -195,7 +181,7 @@
             <div class="container" style="max-width: 700px;">
                 <div class="faq-card p-4 shadow-sm text-center mb-3">
                     <h4 class="h6 fw-bold mb-2">Qual aplicativo devo usar?</h4>
-                    <p class="small mb-3 text-center">O Book Girlie funciona perfeitamente nos melhores aplicativos gratuitos do mercado:</p>
+                    <p class="small mb-3">O Book Girlie funciona perfeitamente nos melhores aplicativos gratuitos do mercado:</p>
                     <div class="row text-center">
                         <div class="col-6"><p class="small"><strong>Android:</strong><br>Samsung Notes ou JNotes.</p></div>
                         <div class="col-6"><p class="small"><strong>iPad/iPhone:</strong><br>CollaNote ou GoodNotes.</p></div>
